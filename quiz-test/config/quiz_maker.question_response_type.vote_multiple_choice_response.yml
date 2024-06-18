@@ -1,0 +1,7 @@
+uuid: 942a0ace-2638-4500-a918-13d864cdba31
+langcode: en
+status: true
+dependencies: {  }
+id: vote_multiple_choice_response
+label: 'Vote multiple choice response'
+plugin: vote_response

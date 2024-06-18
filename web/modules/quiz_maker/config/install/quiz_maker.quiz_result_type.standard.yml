@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aKUWeJ2WH0m2WiQNexTs7M0NweEjOBab37GQjPvMQNI
+id: standard
+label: Standard
+workflow: quiz_result_default

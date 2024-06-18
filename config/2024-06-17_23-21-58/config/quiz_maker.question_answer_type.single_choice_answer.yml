@@ -1,0 +1,9 @@
+uuid: b59a949d-d85b-4363-9dab-169502b61256
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: D-CypLyseervikPdb_9Ni2-cxUFEIz1egTZFEtxMHBA
+id: single_choice_answer
+label: 'Single choice answer'
+plugin: single_choice_answer

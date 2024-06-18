@@ -1,0 +1,9 @@
+uuid: 87c55616-ca4d-4353-8327-df4a1e840839
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ROJ9zJzIrVABSWaLO0c8AmBjMlh8LTTp5MFFQq4LljE
+id: matching_answer
+label: 'Matching answer'
+plugin: matching_answer

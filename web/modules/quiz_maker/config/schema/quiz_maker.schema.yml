@@ -1,0 +1,29 @@
+field.formatter.settings.question_response:
+  type: mapping
+  label: Question Response formatter formatter settings
+  mapping:
+    list_style:
+      type: string
+      label: 'Number with bracket'
+
+field.formatter.settings.score_field_formatter:
+  type: mapping
+  label: Score formatter settings
+  mapping:
+    suffix:
+      type: string
+      label: '%'
+
+quiz_maker.quiz_result_type.*:
+  type: config_entity
+  label: 'Quiz result type'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    workflow:
+      type: string
+      label: 'Workflow'

@@ -1,0 +1,11 @@
+uuid: ecb17bbe-8ad3-47dc-8acd-53bb818e369e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: W60M6ffNiOb8ozNedjhCtRLs_86GuzR1AhaRihe_l4c
+id: matching_question
+label: 'Matching question'
+plugin: matching_question
+answer_type: matching_answer
+response_type: matching_choice_response

@@ -1,0 +1,46 @@
+name: draoi-drupal
+recipe: drupal10
+config:
+  webroot: web
+services:
+  appserver:
+    overrides:
+      environment:
+        # Support debugging CLI with Xdebug.
+        PHP_IDE_CONFIG: "serverName=appserver"
+        XDEBUG_SESSION_START: lando
+tooling:
+  drush:
+    cmd: "/app/vendor/bin/drush --root=/app/web"
+
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for apache.
+    cmd: "docker-php-ext-enable xdebug && /etc/init.d/apache2 reload"
+    user: root
+
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for apache.
+    cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
+    user: root
+
+  cache-on:
+    service: appserver
+    cmd: /app/scripts/cache-on.sh
+
+  cache-off:
+    service: appserver
+    cmd: /app/scripts/cache-off.sh
+
+  import:
+    service: appserver
+    cmd: /app/scripts/import.sh
+
+  export:
+    service: appserver
+    cmd: /app/scripts/export.sh
+
+  init-drupal:
+    service: appserver
+    cmd: /app/scripts/init-drupal.sh

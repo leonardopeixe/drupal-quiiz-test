@@ -1,0 +1,94 @@
+uuid: 5b159b59-11f4-416c-a941-9899477eb1e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.question_answer.matching_answer.field_matching_answer
+    - field.field.question_answer.matching_answer.field_matching_question
+    - field.field.question_answer.matching_answer.field_score
+    - quiz_maker.question_answer_type.matching_answer
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: gq-OIxNx0izsTwowXX_PuK-te14rgcATkZPhgAJ651M
+id: question_answer.matching_answer.default
+targetEntityType: question_answer
+bundle: matching_answer
+mode: default
+content:
+  answer:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  created:
+    type: timestamp
+    label: above
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_matching_answer:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_matching_question:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_score:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  is_correct:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: -5
+    region: content
+  uid:
+    type: author
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+hidden: {  }

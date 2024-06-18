@@ -1,0 +1,9 @@
+uuid: 45984099-3751-443e-b16e-0f5b93b1af16
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lXKBGmQCjROxKAypGgDZq5j6osyYsxuPUiVnPrZPLBA
+id: direct_response
+label: 'Direct response'
+plugin: direct_response

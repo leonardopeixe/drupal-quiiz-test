@@ -1,0 +1,9 @@
+uuid: 0b310f79-24bf-4c99-9fae-07d33861f4b8
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ZgIevlIfy5v9GZrpHkRptv2BLRmcBYznQgoKT8NX4h0
+id: boolean_response
+label: 'Boolean response'
+plugin: boolean_response

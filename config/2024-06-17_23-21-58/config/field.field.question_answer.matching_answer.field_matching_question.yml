@@ -1,0 +1,26 @@
+uuid: 211afacd-d4ea-49d7-9989-def066b8e92f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.question_answer.field_matching_question
+    - filter.format.full_html
+    - quiz_maker.question_answer_type.matching_answer
+  module:
+    - text
+_core:
+  default_config_hash: zNuSYvjcz4j9JcG-qG2Cul7w6L4p_c9jwywLWsfnxeM
+id: question_answer.matching_answer.field_matching_question
+field_name: field_matching_question
+entity_type: question_answer
+bundle: matching_answer
+label: 'Matching question'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

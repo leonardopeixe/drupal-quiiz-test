@@ -1,0 +1,106 @@
+# Admin page
+quiz_maker.admin:
+  title: Quiz Maker
+  parent: system.admin
+  route_name: quiz_maker.admin
+
+# Quiz master structure.
+quiz_maker.admin.structure:
+  title: Structure
+  route_name: quiz_maker.admin.structure
+  parent: quiz_maker.admin
+  weight: 4
+
+# Quiz results.
+quiz_maker.admin.results:
+  title: Results
+  route_name: quiz_maker.admin.results
+  parent: quiz_maker.admin
+  weight: 3
+
+# Entity types collection.
+entity.quiz_type.collection:
+  title: 'Quiz types'
+  description: 'Manage and CRUD actions on Quiz type.'
+  parent: quiz_maker.admin.structure
+  route_name: entity.quiz_type.collection
+  weight: 0
+
+entity.question_type.collection:
+  title: 'Question types'
+  description: 'Manage and CRUD actions on Question type.'
+  parent: quiz_maker.admin.structure
+  route_name: entity.question_type.collection
+  weight: 1
+
+entity.question_answer_type.collection:
+  title: 'Question Answer types'
+  description: 'Manage and CRUD actions on Question Answer type.'
+  parent: quiz_maker.admin.structure
+  route_name: entity.question_answer_type.collection
+  weight: 2
+
+entity.quiz_result_type.collection:
+  title: 'Quiz Result types'
+  description: 'Manage and CRUD actions on Quiz Result type.'
+  parent: quiz_maker.admin.structure
+  route_name: entity.quiz_result_type.collection
+  weight: 3
+
+entity.question_response_type.collection:
+  title: 'Question Response types'
+  description: 'Manage and CRUD actions on Question Response type.'
+  parent: quiz_maker.admin.structure
+  route_name: entity.question_response_type.collection
+  weight: 4
+
+# Entities collection.
+entity.quiz.collection:
+  title: 'Quizzes'
+  description: 'List of quizzes.'
+  route_name: view.quizzes.quiz_list
+  parent: quiz_maker.admin
+  weight: 0
+
+entity.question.collection:
+  title: 'Questions'
+  description: 'List of questions.'
+  route_name: view.questions.question_list
+  parent: quiz_maker.admin
+  weight: 1
+
+questions:
+  title: 'Questions'
+  description: 'List of questions.'
+  route_name: view.questions.question_list
+  parent: entity.question.collection
+  weight: 1
+
+answers:
+  title: 'Answers'
+  description: 'List of question answers.'
+  route_name: view.question_answers.answer_list
+  parent: entity.question.collection
+  weight: 2
+
+entity.quiz_result.collection:
+  title: 'Quiz Results'
+  description: 'List of quiz results.'
+  route_name: view.quiz_results.result_list
+  parent: quiz_maker.admin.results
+  weight: 3
+
+entity.quiz_result.on_review:
+  title: 'On review'
+  description: 'List of quiz results on review.'
+  route_name: view.quiz_results_on_review.result_list
+  parent: quiz_maker.admin.results
+  class: '\Drupal\quiz_maker\Plugin\Menu\QuizResultsOnReview'
+  weight: 2
+
+entity.question_response.collection:
+  title: 'Question Responses'
+  description: 'List of question responses.'
+  route_name: entity.question_response.collection
+  parent: quiz_maker.admin.results
+  weight: 4

@@ -1,0 +1,10 @@
+uuid: 24bf93f8-e629-40b7-b483-7bebaeeafac9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: H7jRsNqURrrlbWNvxvVNtCEnn6eJvTchp-oDqsiM8XM
+name: 'Questions tags'
+vid: questions_tags
+description: ''
+weight: 0

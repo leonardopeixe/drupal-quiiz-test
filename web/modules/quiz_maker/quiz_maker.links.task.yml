@@ -1,0 +1,60 @@
+entity.quiz.view:
+  route_name: entity.quiz.canonical
+  title: View
+  base_route: entity.quiz.canonical
+
+entity.quiz.edit_form:
+  route_name: entity.quiz.edit_form
+  title: Edit
+  base_route: entity.quiz.canonical
+
+entity.question.view:
+  route_name: entity.question.canonical
+  title: View
+  base_route: entity.question.canonical
+
+entity.question.edit_form:
+  route_name: entity.question.edit_form
+  title: Edit
+  base_route: entity.question.canonical
+
+entity.quiz_type.edit:
+  route_name: entity.quiz_type.edit_form
+  title: Edit
+  base_route: entity.quiz_type.edit_form
+
+entity.question_type.edit:
+  route_name: entity.question_type.edit_form
+  title: Edit
+  base_route: entity.question_type.edit_form
+
+entity.question_answer_type.edit:
+  route_name: entity.question_answer_type.edit_form
+  title: Edit
+  base_route: entity.question_answer_type.edit_form
+
+entity.quiz_result_type.edit:
+  route_name: entity.quiz_result_type.edit_form
+  title: Edit
+  base_route: entity.quiz_result_type.edit_form
+
+entity.question_response.view:
+  title: 'View'
+  route_name: entity.question_response.canonical
+  base_route: entity.question_response.canonical
+
+entity.question_response.edit_form:
+  title: 'Edit'
+  route_name: entity.question_response.edit_form
+  base_route: entity.question_response.canonical
+
+entity.question_response.delete_form:
+  title: 'Delete'
+  route_name: entity.question_response.delete_form
+  base_route: entity.question_response.canonical
+  weight: 10
+
+entity.question_response_type.edit_form:
+  title: 'Edit'
+  route_name: entity.question_response_type.edit_form
+  base_route: entity.question_response_type.edit_form

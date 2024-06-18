@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * Default module.
+ */
+
+ /**
+ * Implements hook_theme().
+ */
+function quiz_maker_results_theme() {
+  return [
+    'quiz-maker-results' => [
+      'variables' => ['quiz_summary' => []],
+      'template' => 'quiz-maker-results',
+    ],
+    'success-quiz' => [
+      'variables' => ['message' => NULL],
+      'template' => 'success-quiz',
+    ],
+    'show-quiz' => [
+      'variables' => ['id' => [], 'content' => NULL],
+      'template' => 'show-quiz',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function quiz_maker_results_page_attachments_alter(array &$attachments) {
+  $attachments['#attached']['library'][] = 'quiz_maker_results/custom';
+}

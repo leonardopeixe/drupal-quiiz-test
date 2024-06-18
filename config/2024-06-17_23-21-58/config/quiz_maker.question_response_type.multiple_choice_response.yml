@@ -1,0 +1,9 @@
+uuid: 928058a4-5848-424e-99e0-bccfcb6549ab
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Mt4m4Mz6YThFc62umuDkYcWw6NX7At6X0BsXmBAq33s
+id: multiple_choice_response
+label: 'Multiple choice response'
+plugin: multiple_choice_response

@@ -1,0 +1,76 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a quiz result entity.
+ *
+ * This template is used when viewing a canonical quiz result page,
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.label'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_quiz_result()
+ */
+#}
+<article{{ attributes }}>
+  {% if view_mode != 'full' %}
+    {{ title_prefix }}
+    {{ title_suffix }}
+  {% endif %}
+  {% if content %}
+    {% if is_quiz_completed %}
+    <table class="info-table">
+      <tr>
+        <th>
+          {{ 'Started'|t }}
+        </th>
+        <th>
+          {{ 'Finished'|t }}
+        </th>
+        <th>
+          {{ 'Score'|t }}
+        </th>
+        <th>
+          {{ 'Attempts'|t }}
+        </th>
+        <th>
+          {{ 'Passed'|t }}
+        </th>
+      </tr>
+      <tr>
+        <td>
+          {{ content.created }}
+        </td>
+        <td>
+          {{ content.finished }}
+        </td>
+        <td>
+          {{ content.score }}
+        </td>
+        <td>
+          {{ content.attempt }}
+        </td>
+        <td>
+          {{ content.passed }}
+        </td>
+      </tr>
+
+    </table>
+    <div class="response-list">
+      {{ content.responses }}
+    </div>
+    <div class="quiz-result-links">
+      {{ take_quiz }}
+      {{ back_to_quiz }}
+    </div>
+    {% else %}
+      <div>
+        <p>{{ 'This result is on assessment. It will appear in your results list after assessment.' }}</p>
+      </div>
+      <div class="quiz-result-links">
+        {{ back_to_quiz }}
+      </div>
+    {% endif %}
+  {% endif %}
+</article>

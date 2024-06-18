@@ -1,0 +1,113 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - quiz_maker.quiz_type.standard
+  module:
+    - datetime_range
+    - quiz_maker
+    - text
+id: quiz.standard.default
+targetEntityType: quiz
+bundle: standard
+mode: default
+content:
+  access_period:
+    type: daterange_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  allow_backwards_navigation:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  allow_changing_answers:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  allow_jumping:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  allow_skipping:
+    type: boolean
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  attempts:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  description:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  pass_rate:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  questions:
+    type: question_count
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  time_limit:
+    type: time_limit
+    label: inline
+    settings:
+      time_format: 'H:i:s'
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  created: true
+  label: true
+  langcode: true
+  manual_assessment: true
+  questions_tag: true
+  randomize_question_sequence: true
+  result_type: true
+  uid: true

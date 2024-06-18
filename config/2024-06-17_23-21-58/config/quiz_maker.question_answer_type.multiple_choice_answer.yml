@@ -1,0 +1,9 @@
+uuid: 8e14b439-90e3-421a-b446-7f2bd9b5b2c2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Jsg1dGfHWHULztMwVVLiuy27tALnPm6avo6ZyCLLIao
+id: multiple_choice_answer
+label: 'Multiple choice answer'
+plugin: multiple_choice_answer

@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - quiz_maker.question_answer_type.boolean_answer
+  module:
+    - text
+id: question_answer.boolean_answer.default
+targetEntityType: question_answer
+bundle: boolean_answer
+mode: default
+content:
+  answer:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  is_correct:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

@@ -1,0 +1,7 @@
+uuid: 02b62cae-39f0-4489-bc45-bebc687a41e1
+langcode: en
+status: true
+dependencies: {  }
+id: vote_multiple_choice_answer
+label: 'Vote multiple choice answer'
+plugin: vote_answer

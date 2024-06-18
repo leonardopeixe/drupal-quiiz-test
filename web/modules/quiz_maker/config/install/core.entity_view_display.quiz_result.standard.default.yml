@@ -1,0 +1,107 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - quiz_maker.quiz_result_type.standard
+  module:
+    - quiz_maker
+    - text
+_core:
+  default_config_hash: ZnYmYOaq1O3HQ_rVsUXOjL94wJCA2GyH14HnZuaUzV8
+id: quiz_result.standard.default
+targetEntityType: quiz_result
+bundle: standard
+mode: default
+content:
+  attempt:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  created:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  responses:
+    type: question_response_formatter
+    label: above
+    settings:
+      list_style: 'Number with bracket'
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  finished:
+    type: timestamp
+    label: hidden
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+      tooltip:
+        date_format: long
+        custom_date_format: ''
+      time_diff:
+        enabled: false
+        future_format: '@interval hence'
+        past_format: '@interval ago'
+        granularity: 2
+        refresh: 60
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  passed:
+    type: boolean
+    label: hidden
+    settings:
+      format: yes-no
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  score:
+    type: score_field_formatter
+    label: hidden
+    settings:
+      suffix: '%'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  quiz: true
+  state: true
+  uid: true

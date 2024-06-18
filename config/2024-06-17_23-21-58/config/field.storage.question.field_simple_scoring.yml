@@ -1,0 +1,20 @@
+uuid: fe9dbdce-d8ce-48bc-8de7-fd172c8609b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - quiz_maker
+_core:
+  default_config_hash: '-DnCOpnynOoFja0G4ZyNSw4jO0c5TLmvEP0dI3R-HkE'
+id: question.field_simple_scoring
+field_name: field_simple_scoring
+entity_type: question
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

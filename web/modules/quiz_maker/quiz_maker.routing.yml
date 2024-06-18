@@ -1,0 +1,202 @@
+quiz_maker.admin:
+  path: '/admin/quiz_maker'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Quiz Maker'
+  requirements:
+    _permission: 'administer quiz'
+
+quiz_maker.admin.structure:
+  path: '/admin/quiz_maker/structure'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Structure'
+  requirements:
+    _permission: 'administer quiz'
+
+quiz_maker.admin.results:
+  path: '/admin/quiz_maker/results'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Results'
+  requirements:
+    _permission: 'administer quiz_result'
+
+quiz.results:
+  path: 'quiz/{quiz}/results'
+  requirements:
+    _permission: 'edit quiz_result'
+  options:
+    _admin_route: true
+    parameters:
+      quiz:
+        type: 'entity:quiz'
+
+quiz.take:
+  path: 'quiz/{quiz}/take'
+  defaults:
+    _form: '\Drupal\quiz_maker\Form\QuizTakeForm'
+    _title_callback: '\Drupal\quiz_maker\Controller\QuizMakerController::getQuizTakeFormTitle'
+  requirements:
+    _permission: 'take quiz'
+    _custom_access: '\Drupal\quiz_maker\Controller\QuizMakerController::quizTakeAccess'
+  options:
+    parameters:
+      quiz:
+        type: 'entity:quiz'
+
+quiz_maker.quiz_result_review:
+  path: '/quiz-maker/{quiz_result}/review'
+  defaults:
+    _title: 'Quiz Result Review'
+    _form: 'Drupal\quiz_maker\Form\QuizResultReviewForm'
+  requirements:
+    _permission: 'review quiz_result'
+  options:
+    parameters:
+      quiz:
+        type: 'entity:quiz_result'
+
+entity.quiz.version_history:
+  path: '/quiz/{quiz}/revisions'
+  defaults:
+    _title: 'Revisions'
+    _controller: '\Drupal\quiz_maker\Controller\QuizController::revisionOverview'
+  requirements:
+    _permission: 'view all quiz revisions'
+  options:
+    _admin_route: true
+    parameters:
+      quiz:
+        type: 'entity:quiz'
+
+entity.quiz.revision:
+  path: '/quiz/{quiz}/revisions/{quiz_revision}/view'
+  defaults:
+    _controller: '\Drupal\Core\Entity\Controller\EntityRevisionViewController'
+    _title_callback: '\Drupal\Core\Entity\Controller\EntityController::title'
+  requirements:
+    _permission: 'view all quiz revisions'
+  options:
+    parameters:
+      quiz:
+        type: 'entity:quiz'
+      quiz_revision:
+        type: entity_revision:quiz
+
+quiz.revision_revert_confirm:
+  path: '/quiz/{quiz}/revisions/{quiz_revision}/revert'
+  defaults:
+    _form: '\Drupal\entity\Form\RevisionRevertForm'
+    _title: 'Revert to earlier revision'
+  requirements:
+    _permission: 'revert quiz revision'
+  options:
+    _admin_route: true
+    parameters:
+      quiz:
+        type: 'entity:quiz'
+      quiz_revision:
+        type: entity_revision:quiz
+
+quiz.revision_delete_confirm:
+  path: '/quiz/{quiz}/revisions/{quiz_revision}/delete'
+  defaults:
+    _form: '\Drupal\entity\Form\RevisionDeleteForm'
+    _title: 'Delete earlier revision'
+  requirements:
+    _permission: 'delete quiz revision'
+  options:
+    _admin_route: true
+    parameters:
+      quiz:
+        type: 'entity:quiz'
+      quiz_revision:
+        type: entity_revision:quiz
+
+quiz.revision_revert_translation_confirm:
+  path: '/quiz/{quiz}/revisions/{quiz_revision}/revert/{langcode}'
+  defaults:
+    _form: '\Drupal\quiz_maker\Form\QuizRevisionRevertTranslationForm'
+    _title: 'Revert to earlier revision of a translation'
+  requirements:
+    _permission: 'revert quiz translation revision'
+  options:
+    _admin_route: true
+    parameters:
+      quiz:
+        type: 'entity:quiz'
+      quiz_revision:
+        type: entity_revision:quiz
+
+entity.question.version_history:
+  path: '/question/{question}/revisions'
+  defaults:
+    _title: 'Revisions'
+    _controller: '\Drupal\quiz_maker\Controller\QuestionController::revisionOverview'
+  requirements:
+    _permission: 'view all question revisions'
+  options:
+    _admin_route: true
+    parameters:
+      question:
+        type: 'entity:question'
+
+entity.question.revision:
+  path: '/question/{question}/revisions/{question_revision}/view'
+  defaults:
+    _controller: '\Drupal\Core\Entity\Controller\EntityRevisionViewController'
+    _title_callback: '\Drupal\Core\Entity\Controller\EntityController::title'
+  requirements:
+    _permission: 'view all question revisions'
+  options:
+    parameters:
+      question:
+        type: 'entity:question'
+      question_revision:
+        type: entity_revision:question
+
+question.revision_revert_confirm:
+  path: '/question/{question}/revisions/{question_revision}/revert'
+  defaults:
+    _form: '\Drupal\entity\Form\RevisionRevertForm'
+    _title: 'Revert to earlier revision'
+  requirements:
+    _permission: 'revert question revision'
+  options:
+    _admin_route: true
+    parameters:
+      question:
+        type: 'entity:question'
+      question_revision:
+        type: entity_revision:question
+
+question.revision_delete_confirm:
+  path: '/question/{question}/revisions/{question_revision}/delete'
+  defaults:
+    _form: '\Drupal\entity\Form\RevisionDeleteForm'
+    _title: 'Delete earlier revision'
+  requirements:
+    _permission: 'delete question revision'
+  options:
+    _admin_route: true
+    parameters:
+      question:
+        type: 'entity:question'
+      question_revision:
+        type: entity_revision:question
+
+question.revision_revert_translation_confirm:
+  path: '/question/{question}/revisions/{question_revision}/revert/{langcode}'
+  defaults:
+    _form: '\Drupal\quiz_maker\Form\QuestionRevisionRevertTranslationForm'
+    _title: 'Revert to earlier revision of a translation'
+  requirements:
+    _permission: 'revert question translation revision'
+  options:
+    _admin_route: true
+    parameters:
+      question:
+        type: 'entity:question'
+      question_revision:
+        type: entity_revision:question

@@ -1,0 +1,21 @@
+uuid: f9c7d125-bddb-4df3-a974-5b977fd0aa53
+langcode: en
+status: true
+dependencies:
+  module:
+    - quiz_maker
+_core:
+  default_config_hash: IYzg2RmU1PUVe1xLDELWDvoGc2FSYEU_WhUfT9Xazso
+id: question_response.field_user_response
+field_name: field_user_response
+entity_type: question_response
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

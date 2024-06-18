@@ -1,0 +1,6 @@
+quiz_maker_results.admin_menu:
+  title: 'Quiz Results Table'
+  description: 'Quiz results table'
+  parent: system.admin
+  route_name: quiz_maker_results.quiz_results_page
+  weight: 3

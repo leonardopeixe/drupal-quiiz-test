@@ -1,0 +1,26 @@
+quiz_result_default:
+  id: quiz_result_default
+  group: quiz_result
+  label: 'Default'
+  states:
+    draft:
+      label: Draft
+    on_review:
+      label: 'On review'
+    completed:
+      label: Completed
+    evaluated:
+      label: Evaluated
+  transitions:
+    to_review:
+      label: 'Send quiz to review'
+      from: [draft]
+      to: on_review
+    complete:
+      label: 'Complete quiz'
+      from: [draft]
+      to: completed
+    evaluate:
+      label: 'Evaluate quiz'
+      from: [on_review]
+      to: evaluated

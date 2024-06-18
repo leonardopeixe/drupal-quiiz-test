@@ -1,0 +1,52 @@
+quiz_maker_results.quiz_results_page:
+  path: '/admin/quiz-answers'
+  defaults:
+    _controller: '\Drupal\quiz_maker_results\Controller\QuizMakerResultsController::displayAllQuizResults'
+    _title: 'Quiz Answers'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    no_cache: TRUE
+    _admin_route: TRUE
+
+quiz_maker_results.quiz_results_page_api:
+  path: '/admin/quiz-answers/json'
+  defaults:
+    _controller: '\Drupal\quiz_maker_results\Controller\QuizMakerResultsController::apiListQuizzes'
+    _title: 'Quiz Answers JSON'
+  requirements:
+    _permission: 'administer site configuration'
+  options:
+    no_cache: TRUE
+    _admin_route: TRUE
+
+# OVERRIDE ROUTE QUIZ
+entity.quiz_result.canonical:
+  path: '/quiz-result/{quiz_result}'
+  defaults:
+    _controller: '\Drupal\quiz_maker_results\Controller\QuizMakerResultsController::successQuiz'
+    _title: 'Custom Quiz Result'
+  requirements:
+    _permission: 'access content'
+    quiz_result: \d+
+  options:
+    parameters:
+      quiz_result:
+        type: 'entity:quiz_result'
+    no_cache: TRUE
+    _admin_route: FALSE
+
+entity.quiz.canonical:
+  path: '/quiz/{quiz}'
+  defaults:
+    _controller: '\Drupal\quiz_maker_results\Controller\QuizMakerResultsController::showQuiz'
+    _title: 'Custom Quiz Result'
+  requirements:
+    _permission: 'access content'
+    quiz_result: \d+
+  options:
+    parameters:
+      quiz_result:
+        type: 'entity:quiz_result'
+    no_cache: TRUE
+    _admin_route: FALSE

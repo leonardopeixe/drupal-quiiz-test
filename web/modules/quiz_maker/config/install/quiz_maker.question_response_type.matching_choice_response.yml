@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: i6vVDNjPzYAL24lEzOjuVnKzg0pQWFUAtcaM1ZNBess
+id: matching_choice_response
+label: 'Matching choice response'
+plugin: matching_choice_response

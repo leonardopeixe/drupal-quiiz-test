@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ekmTfgNHzY6nfk_mmwWnVxJitvYmjyiO_oROxejSgYc
+id: boolean_response
+label: 'Boolean response'
+plugin: boolean_response

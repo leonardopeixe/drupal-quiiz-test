@@ -1,0 +1,20 @@
+uuid: c3865426-8f04-4e73-8a92-ca8f459897f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - quiz_maker
+_core:
+  default_config_hash: M-R50-aE4nvh9gvW-NZ4Pg69ONvF1Kbj3GOgUR8Evos
+id: question.field_similarity
+field_name: field_similarity
+entity_type: question
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

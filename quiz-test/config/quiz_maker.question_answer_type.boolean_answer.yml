@@ -1,0 +1,9 @@
+uuid: 6ed444c6-96ba-49d2-88e0-468620eaa319
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NJ6Hy76zZrgZd_chsOmK7bau4iN85Ea60Wtx5J1fFxU
+id: boolean_answer
+label: 'Boolean answer'
+plugin: boolean_answer

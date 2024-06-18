@@ -1,0 +1,25 @@
+uuid: f7fa2b63-19c7-437f-8ac6-4b030067de0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.question.field_simple_scoring
+    - quiz_maker.question_type.matching_question
+_core:
+  default_config_hash: LoksvFLOM0tC_aFwEau3cPSmyNVsrtC423Pw4ho7_-I
+id: question.matching_question.field_simple_scoring
+field_name: field_simple_scoring
+entity_type: question
+bundle: matching_question
+label: 'Simple scoring'
+description: 'Turn it off if need to evaluate answers separately. Explanation:  the question score will be calculated as the sum of the score of the right answers divided by the sum of the score of all answers and multiplied by the question max score.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

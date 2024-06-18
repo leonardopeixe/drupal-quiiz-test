@@ -1,0 +1,13 @@
+uuid: fb78b1ad-c152-48ee-91aa-6afaa16607f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - quiz_maker
+_core:
+  default_config_hash: kQUWlQNkPPGwL9drfw_JmJQskpi1jLfahEgktfy5GgA
+id: question_answer_delete_action
+label: 'Delete question answers'
+type: question_answer
+plugin: 'entity:delete_action:question_answer'
+configuration: {  }

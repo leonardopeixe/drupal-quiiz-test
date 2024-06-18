@@ -1,0 +1,11 @@
+uuid: 0f39b231-fe82-42e9-9901-dcc4bb378937
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FY_Ds6uApLCVjqSUbnoM9QRhKTX0zCfQkoc79X1DTFo
+id: boolean_question
+label: 'Boolean question'
+plugin: boolean_question
+answer_type: boolean_answer
+response_type: boolean_response

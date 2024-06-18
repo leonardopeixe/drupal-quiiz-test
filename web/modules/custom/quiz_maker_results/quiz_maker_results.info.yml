@@ -1,0 +1,8 @@
+name: 'Quiz Maker - Results'
+type: module
+description: 'Provides a results page for Quiz Maker Module.'
+core_version_requirement: ^10
+package: Quiz Maker
+dependencies:
+  - drupal:block
+  - quiz_maker

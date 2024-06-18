@@ -1,0 +1,9 @@
+uuid: 12943014-3b12-44c3-b221-700831269085
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aaC9Kki7MrXu4n9Rd9VNf2KqZ-VlA7ScG_zIrruzKm8
+id: matching_choice_response
+label: 'Matching choice response'
+plugin: matching_choice_response

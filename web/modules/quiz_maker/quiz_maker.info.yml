@@ -1,0 +1,20 @@
+name: 'Quiz Maker'
+type: module
+description: 'Provide functionality to Create engaging quizzes.'
+package: Quiz Maker
+core_version_requirement: ^9 || ^10 || ^11
+dependencies:
+  - drupal:datetime_range
+  - drupal:editor
+  - entity_reference_revisions:entity_reference_revisions
+  - inline_entity_form:inline_entity_form
+  - field_group:field_group
+  - views_bulk_operations:views_bulk_operations
+  - entity_browser:entity_browser
+  - entity:entity
+  - state_machine:state_machine
+
+# Information added by Drupal.org packaging script on 2024-06-04
+version: '1.0.6'
+project: 'quiz_maker'
+datestamp: 1717505133

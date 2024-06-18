@@ -1,0 +1,9 @@
+uuid: 3748b8a3-38e7-4803-9515-cade03a8d714
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: tvOEgDHt4TjUihD4SupXrx7pn1NMA1CeZZOiF2KdWDI
+id: direct_answer
+label: 'Direct answer'
+plugin: direct_answer

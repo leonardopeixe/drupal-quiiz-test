@@ -1,0 +1,12 @@
+include:
+  - project: $_GITLAB_TEMPLATES_REPO
+    ref: $_GITLAB_TEMPLATES_REF
+    file:
+      - '/includes/include.drupalci.main.yml'
+      - '/includes/include.drupalci.variables.yml'
+      - '/includes/include.drupalci.workflows.yml'
+
+variables:
+  _TARGET_CORE: "^9.5.3 || ^10.3 || ^11"
+  _CSPELL_IGNORE_PATHS: './config/*, ./css/*, ./icons/*, ./images/*, ./README.md'
+  _CSPELL_WORDS: 'langname, grumphp, perc'

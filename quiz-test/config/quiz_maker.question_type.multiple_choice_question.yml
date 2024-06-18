@@ -1,0 +1,11 @@
+uuid: f8c7f94c-6352-49fb-a83a-42bcf8794afb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: b1MCPqB7U3ht4wWMdC7KUWgqo1gwP7i6uXmp-UD3BcI
+id: multiple_choice_question
+label: 'Multiple choice question'
+plugin: multiple_choice_question
+answer_type: multiple_choice_answer
+response_type: multiple_choice_response

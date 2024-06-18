@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: yIgp3i-AKbqUF0giuNgUarQDrmEkxomkAPqn0ApTocM
+id: direct_answer
+label: 'Direct answer'
+plugin: direct_answer

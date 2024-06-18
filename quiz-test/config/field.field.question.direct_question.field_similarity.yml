@@ -1,0 +1,27 @@
+uuid: 9d424645-4ac3-4c16-88d9-db96dc312b85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.question.field_similarity
+    - quiz_maker.question_type.direct_question
+_core:
+  default_config_hash: WQ6prHdF4oAe2efq_KmJJcYjt2W7entSz_TBxSg6FVQ
+id: question.direct_question.field_similarity
+field_name: field_similarity
+entity_type: question
+bundle: direct_question
+label: Similarity
+description: 'Similarity between correct answer and user response.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 100.0
+default_value_callback: ''
+settings:
+  min: 0.0
+  max: 100.0
+  prefix: ''
+  suffix: '%'
+field_type: float

@@ -1,0 +1,11 @@
+uuid: b34a78c7-1e92-46be-92d5-615847261f61
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: xNPE0qtltO1jbmoEv1M3cx91IZxEonQbT3CtcuzoT9E
+id: single_choice_question
+label: 'Single choice question'
+plugin: single_choice_question
+answer_type: single_choice_answer
+response_type: single_choice_response

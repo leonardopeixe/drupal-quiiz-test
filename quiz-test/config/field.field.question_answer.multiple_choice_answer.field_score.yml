@@ -1,0 +1,27 @@
+uuid: 73d432fd-dc62-449c-87eb-26898ebc0eba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.question_answer.field_score
+    - quiz_maker.question_answer_type.multiple_choice_answer
+_core:
+  default_config_hash: 2_kdRqlyUD1a918C_ErOtvlRL3pTuLKTVAu-3g_1K-U
+id: question_answer.multiple_choice_answer.field_score
+field_name: field_score
+entity_type: question_answer
+bundle: multiple_choice_answer
+label: Score
+description: 'Used if you disable simple scoring.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,11 @@
+uuid: 681b9e5d-dbd9-4182-b9ad-d82d564dc2c2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: PoaHQ-kzVqfk4AkhFQQYEdoLdAGqaiwHcPpoTNblCDc
+id: direct_question
+label: 'Direct question'
+plugin: direct_question
+answer_type: direct_answer
+response_type: direct_response

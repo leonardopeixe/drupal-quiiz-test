@@ -1,0 +1,20 @@
+uuid: 557a9dd2-40b0-45d1-a93a-af6e04cc5223
+langcode: en
+status: true
+dependencies:
+  module:
+    - quiz_maker
+_core:
+  default_config_hash: ZRinyT2i8p-Dmfax9jFlGGe0iROYUTnoPvlkYrXmjRo
+id: question.field_boolean_state
+field_name: field_boolean_state
+entity_type: question
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: cbf377c4-6bb3-4261-8250-8dff1e9e7a16
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 2HXlwOw5VEEnEGKHLaiGjhrZngbsE_qKt8Rx9w5qnVg
+id: standard
+label: Standard
+workflow: quiz_result_default

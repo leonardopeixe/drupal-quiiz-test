@@ -1,0 +1,21 @@
+uuid: dd67ec01-b9e6-490d-8bef-49acfceb2ddd
+langcode: en
+status: true
+dependencies:
+  module:
+    - quiz_maker
+    - text
+_core:
+  default_config_hash: w8Hjgzd7tjiIeo1vDFrpOtgFUzFs49SrNma51bgR2Zo
+id: question_answer.field_matching_question
+field_name: field_matching_question
+entity_type: question_answer
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

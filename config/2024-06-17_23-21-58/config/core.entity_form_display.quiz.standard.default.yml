@@ -1,0 +1,165 @@
+uuid: cb5f3db9-107c-462e-b091-fc7a901026fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - quiz_maker.quiz_type.standard
+  module:
+    - datetime_range
+    - field_group
+    - inline_entity_form
+    - text
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - group_availability_options
+      label: Settings
+      region: content
+      parent_name: ''
+      weight: 5
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_taking_options:
+      children:
+        - allow_changing_answers
+        - allow_jumping
+        - allow_skipping
+        - allow_backwards_navigation
+        - randomize_question_sequence
+      label: 'Taking options'
+      region: hidden
+      parent_name: ''
+      weight: 8
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_availability_options:
+      children:
+        - time_limit
+        - attempts
+        - access_period
+      label: 'Availability options'
+      region: content
+      parent_name: group_settings
+      weight: 23
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_pass_fail_options:
+      children:
+        - pass_rate
+      label: 'Pass fail options'
+      region: hidden
+      parent_name: ''
+      weight: 7
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+_core:
+  default_config_hash: cTF4Ltt_YgBIypa7NDR3u886Pihqgq11xdv1jDJFRUY
+id: quiz.standard.default
+targetEntityType: quiz
+bundle: standard
+mode: default
+content:
+  access_period:
+    type: daterange_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  attempts:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  questions:
+    type: inline_entity_form_complex
+    weight: 2
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      allow_duplicate: true
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  questions_tag:
+    type: entity_reference_autocomplete_tags
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  result_type:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  time_limit:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  allow_backwards_navigation: true
+  allow_changing_answers: true
+  allow_jumping: true
+  allow_skipping: true
+  created: true
+  manual_assessment: true
+  pass_rate: true
+  randomize_question_sequence: true
+  uid: true
